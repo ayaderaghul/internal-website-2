@@ -13,9 +13,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
     {% if title %}
-        <title>CRM - {{ title }}</title>
+        <title>Django Blog - {{ title }}</title>
     {% else %}
-        <title>CRM</title>
+        <title>Django Blog</title>
     {% endif %}
 </head>
 <body>
@@ -31,14 +31,10 @@
               <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
               <a class="nav-item nav-link" href="{% url 'keyword-home' %}">Topics</a>
-              <a class="nav-item nav-link" href="{% url 'proposal-home' %}">Research</a>
-
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
-                <a class="nav-item nav-link" href="{% url 'proposal-create' %}">New Proposal</a>
-
                 <a class="nav-item nav-link" href="{% url 'keyword-create' %}">New Topic</a>
                 <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
                 <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>

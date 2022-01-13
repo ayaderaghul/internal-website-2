@@ -19,6 +19,10 @@
       <p class="article-content">all posts: {% for post in object.post_set.all %}
       <a href="{% url 'post-detail' post.id %}">  {{ post.title }}</a>
       {% endfor %}</p>
+
+      <p class="article-content">all proposals: {% for proposal in object.proposal_set.all %}
+        <a href="{% url 'proposal-detail' proposal.id %}">  {{ proposal.title }}</a>
+        {% endfor %}</p>
       
           
     </div>
